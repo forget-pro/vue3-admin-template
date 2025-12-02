@@ -1,0 +1,27 @@
+export default {
+  arrowParens: 'always',
+  bracketSameLine: true,
+  bracketSpacing: true,
+  semi: false,
+  singleQuote: true,
+  jsxSingleQuote: true,
+  quoteProps: 'preserve',
+  trailingComma: 'es5',
+  singleAttributePerLine: false,
+  htmlWhitespaceSensitivity: 'css',
+  vueIndentScriptAndStyle: false,
+  proseWrap: 'always',
+  insertPragma: false,
+  printWidth: 180,
+  requirePragma: false,
+  tabWidth: 2,
+  useTabs: false,
+  embeddedLanguageFormatting: 'auto',
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+  importOrder: ['^~icon/(.*)$', '^@/(.*)$', '^[./]'],
+  plugins: [
+    '@trivago/prettier-plugin-sort-imports',
+    'prettier-plugin-tailwindcss', // Tailwind 插件必须放最后
+  ],
+}

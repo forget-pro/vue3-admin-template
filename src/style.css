@@ -1,0 +1,62 @@
+@import 'tailwindcss';
+@import 'nprogress/nprogress.css';
+@plugin '@iconify/tailwind4';
+@config '../tailwind.config.js';
+@theme {
+  /* 定义主题色 */
+  --color-primary-100: rgb(186 230 255);
+  --color-primary-200: rgb(145 213 255);
+  --color-primary-300: rgb(105 192 255);
+  --color-primary-400: rgb(64 169 255);
+  --color-primary-500: rgb(22 119 255);
+  --color-primary-600: rgb(16 89 217);
+  --color-primary-700: rgb(11 60 179);
+  --color-primary-800: rgb(6 34 140);
+  --color-primary-900: rgb(3 17 102);
+
+  /* 定义 primary 默认色 */
+  --color-primary: var(--color-primary-600);
+}
+
+/* 全局样式 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', 'Roboto', 'Oxygen', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* fade-slide */
+.fade-slide-leave-active,
+.fade-slide-enter-active {
+  transition: all 0.3s;
+}
+
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* nprogress 进度条自定义样式 */
+#nprogress .bar {
+  background: var(--color-primary) !important; /* 使用主题色 */
+  height: 3px !important; /* 进度条高度 */
+}
+
+#nprogress .peg {
+  box-shadow:
+    0 0 10px var(--color-primary),
+    0 0 5px var(--color-primary) !important; /* 发光效果 */
+}
+
+/* 旋转加载器样式（如果启用的话） */
+#nprogress .spinner-icon {
+  border-top-color: var(--color-primary) !important;
+  border-left-color: var(--color-primary) !important;
+}
