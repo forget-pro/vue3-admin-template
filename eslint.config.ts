@@ -2,6 +2,7 @@ import js from '@eslint/js'
 import pluginVue from 'eslint-plugin-vue'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
+import autoImportGlobals from './types/.eslintrc-auto-import.json' with { type: 'json' }
 
 export default [
   // JavaScript 推荐规则
@@ -21,6 +22,8 @@ export default [
         ...globals.browser,
         ...globals.es2021,
         ...globals.node,
+        ...autoImportGlobals.globals,
+        TabCheckColumns: 'readonly',
       },
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -87,6 +90,8 @@ export default [
           order: ['script', 'template', 'style'],
         },
       ],
+      'vue/max-attributes-per-line': 'off',
+      'vue/html-closing-bracket-newline': 'off',
 
       // Vue TSX/JSX 支持
       'vue/prefer-import-from-vue': 'warn',

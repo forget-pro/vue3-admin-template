@@ -5,6 +5,8 @@
     "types": ["vite/client"],
     "jsx": "preserve",
     "jsxImportSource": "vue",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,

@@ -39,6 +39,10 @@ export default defineConfig({
     tailwindcss(),
     autoImportApi({
       dts: './types/auto-imports.d.ts',
+      eslintrc: {
+        enabled: true,
+        filepath: './types/.eslintrc-auto-import.json',
+      },
       imports: ['vue', 'vue-router',
         {
           'naive-ui': ['useMessage', 'useDialog', 'useNotification', 'useLoadingBar']

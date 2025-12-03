@@ -23,16 +23,16 @@ interface BaseField {
     key: string
     label: string
     type: NaiveFieldType
-    props?: Record<string, any>
+    props?: Record<string, unknown>
 }
 
 interface SelectField extends BaseField {
     type: 'asyncSelect'
     props?: {
-        options?: Array<{ label: string; value: any }>
-        [key: string]: any
+        options?: Array<{ label: string; value: unknown }>
+        [key: string]: unknown
     }
-    asyncOptions?: () => Promise<Array<{ label: string; value: any }>>
+    asyncOptions?: () => Promise<Array<{ label: string; value: unknown }>>
 }
 
 export type NaiveSearchField = BaseField | SelectField

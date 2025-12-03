@@ -1,6 +1,10 @@
-declare interface TabCheckColumns {
-    title: string | ((...args: any) => VNodeChild)
-    key: string
-    checked: boolean
-    visible: boolean
+declare global {
+    interface TabCheckColumns {
+        title: string | ((...args: unknown) => VNodeChild)
+        key: string
+        checked: boolean
+        visible: boolean
+    }
 }
+
+export { }
